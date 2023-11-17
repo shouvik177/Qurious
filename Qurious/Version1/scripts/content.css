@@ -1,0 +1,68 @@
+button#btnBQ {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    z-index: 1001;
+
+    height: 40px;
+    width: 40px;
+    background-color: rgb(149, 0, 255);
+
+    border: 2px solid yellow;
+    border-radius: 20px;
+
+    animation-name: stretch;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+}
+
+#btnBQ:hover{
+   transform: scale(1.1);
+   background-color: rgb(163, 4, 115);
+   border-color: yellowgreen;
+   animation-name: none;
+   cursor: pointer;
+} 
+#btnBQ[listening]{
+    animation-name: fast-stretch;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes stretch{
+    0% {
+        background-color: rebeccapurple;
+        border-color: yellow;
+        transform: scale(1);
+    }
+    90% {
+        background-color: rebeccapurple;
+        border-color: yellow;
+        transform: scale(1);
+    }
+    100% {
+        background-color: rebeccapurple;
+        border-color: rgb(242, 255, 0);
+        transform: scale(1.5);
+    }
+}
+@keyframes fast-stretch {
+    0% {
+        background-color: rebeccapurple;
+        border-color: black;
+        transform: scale(1);
+    }
+    100% {
+        background-color: purple;
+        border-color: yellowgreen;
+        transform-style: (1.3);
+    }
+    
+}
